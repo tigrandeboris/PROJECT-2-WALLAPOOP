@@ -19,10 +19,10 @@ Page where you can sell and buy products that you don't need anymore :D
 | `POST`     | `/signup`                    | Sends Sign Up info to the server and creates user in the DB. | { username, password }                   |
 | `GET`      | `/private/edit-profile`      | Private route. Renders `edit-profile` form view.             |                                          |
 | `PUT`      | `/private/edit-profile`      | Private route. Sends edit-profile info to server and updates user in DB. | { username, password }                   |
-| `GET`      | `/private/products           | Private route. Render the `products` view.                   |                                          |
-| `POST`     | `/products                   | Private route. Adds a contact request for the current user.  | { user, name, description, price, image} |
-| `DELETE`   | `/private/product/:productId | Private route. Deletes the existing product from the current user. |                                          |
-| `GET`      | `/products                   | Renders `products-list` view.                                |                                          |
+| `GET`      | `/private/products`           | Private route. Render the `products` view.                   |                                          |
+| `POST`     | `/products`         | Private route. Adds a contact request for the current user.  | { user, name, description, price, image} |
+| `DELETE`   | `/private/product/:productId` | Private route. Deletes the existing product from the current user. |                                          |
+| `GET`      | `/products`          | Renders `products-list` view.                                |                                          |
 ## Models
 User model
 ```
