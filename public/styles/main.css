@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.d-flex {
+    width: calc(100% - 300px);
+}
+
+.section1 {
+   background: url("../images/circles-img.jpg") center center no-repeat;
+   background-size: cover;
+}
+
+.section1 h1 {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.col-sm-12 {
+    margin: 20px;
+}
+
+.logo-caca {
+    width: 100px;
+}
+
+.logo-caca-nav {
+    width: 80px;
+}
+
+footer {
+    background-color: lightgrey;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 50px;
+
+}
