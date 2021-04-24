@@ -9,8 +9,8 @@
 }
 
 .section1 {
-   background: url("../images/circles-img.jpg") center center no-repeat;
-   background-size: cover;
+    background: url("../images/circles-img.jpg") center center no-repeat;
+    background-size: cover;
 }
 
 .section1 h1 {
@@ -36,7 +36,7 @@
 }
 
 footer {
-    background-color: lightgrey;
+    background-color: #f8f6f6;
 }
 
 .footer-info {
@@ -44,5 +44,16 @@ footer {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 50px;
+}
 
+.add-product {
+    background: url("../images/circles-img.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.input-group {
+    width: 500px;
+    margin: 30px;
 }

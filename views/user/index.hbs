@@ -1,9 +1,30 @@
-<div>Private page</div>
-{{#if user}}
-    <div>
-        <h1>Who's the best developer?</h1>
-        <h1>You are, <span style="color: red;">{{ user.username}}</span>. You are! </h1>
-        <img src="http://media.giphy.com/media/UsK5GqD3e0huU/giphy.gif" alt="You rock.">
-        <a href="/">Index</a>
-    </div>
-{{/if}}
+<main>
+        <section class="section1">
+        <h1>Your Products</h1>
+        <div class="container">
+            {{#each products}}
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card box">
+                        <img class="card-img-top image" src="../public/images/product-img.jpg"/>
+                        <div class="card-body">
+                            <h5 class="card-title">{{this.name}}</h5>
+                            <p class="card-text">
+                                {{this.user.username}}
+                            </p>
+                            <p class="card-text">
+                                {{this.description}}
+                            </p>
+                            <p class="card-text">
+                                {{this.price}} EUR
+                            </p>
+                            <div class="text-center">
+                                <a class="btn btn-primary" href="https://google.es"
+                                   target="_blank">Open</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </section>
+</main>
