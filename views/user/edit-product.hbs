@@ -1,0 +1,28 @@
+<div class="add-product">
+    <form action="/user/edit-product/{{product.id}}" method="post" enctype="multipart/form-data">
+        <div>
+            <h1>Edit Product</h1>
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">Name</span>
+            <input value="{{product.name}}" name="name" type="text" class="form-control" placeholder="" aria-label="" aria-describedby="addon-wrapping">
+        </div>
+
+        <div class="input-group form-floating">
+            <textarea name="description" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px">{{product.description}}</textarea>
+            <label for="floatingTextarea2">Description</label>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text">EUR</span>
+            <input value="{{product.price}}" name="price" type="text" class="form-control" aria-label="Euro amount (with dot and two decimal places)">
+        </div>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupFile01">Photo</label>
+            <input value="{{product.image_url}}" name="image" type="file" class="form-control" id="inputGroupFile01">
+        </div>
+
+        <button type="submit" class="input-group btn btn-success">Save</button>
+    </form>
+</div>

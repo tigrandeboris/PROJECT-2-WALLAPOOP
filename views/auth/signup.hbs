@@ -34,27 +34,41 @@
     <!-- Custom styles for this template -->
     <link href="/styles/signin.css" rel="stylesheet">
 </head>
-<body class="text-center">
+<body class="text-center login-signup-back">
 <main class="form-signin">
     <form action="/signup" method="POST">
         <img class="mb-4" src="/images/logo-caca.png" alt="" width="72" height="57">
+
         <h1 class="h3 mb-3 fw-normal">Please Signup</h1>
 
         <div class="form-floating">
-            <input required name="username" type="text" class="form-control" id="floatingInput" placeholder="name@example.com" minlength="3" maxlength="10">
+            <input required name="username" type="text" class="form-control" id="floatingInput" placeholder="Username" minlength="3" maxlength="10">
             <label for="floatingInput">Username</label>
         </div>
+
         <div class="form-floating">
-            <input required name="password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
+            <input required name="password" type="password" class="form-control" id="floatingInput" placeholder="Password" minlength="3" maxlength="10">
+            <label for="floatingInput">Password</label>
         </div>
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
+        <div class="form-floating">
+            <input required name="email" type="email" class="form-control" id="floatingInput" placeholder="Email">
+            <label for="floatingInput">Email</label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Signup</button>
+
+        <div class="form-floating">
+            <input required name="phone" type="text" class="form-control" id="floatingInput" placeholder="Phone">
+            <label for="floatingInput">Phone</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-success" type="submit">Signup</button>
+
+        <div class="sign-in-up-anchor">
+            <a href="/login">Already have an account? Login!</a>
+            <br>
+            <a href="/">Go to Homepage</a>
+        </div>
+
         <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
 </main>

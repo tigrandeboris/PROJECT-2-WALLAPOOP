@@ -11,70 +11,78 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <img class="logo-caca-nav" src="/images/logo-caca.png" alt="">
-            <a class="navbar-brand" href="/">WallaPOOP!</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <a class="navbar-brand" href="/"><span class="brand-name">WallaPOOP!</span></a>
+                <form action="/" method="get" class="d-flex">
+                    <input name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
-                {{#if user}}
-                    Hi {{user.username}}
-                {{/if}}
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    {{#if user}}
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/user">My Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/user/add-product">Add Product</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/logout">Logout</a>
-                        </li>
-                    {{else}}
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/signup">Signup</a>
-                        </li>
-                    {{/if}}
-                </ul>
+                <div>
+                    <div class="navbar-username">
+                        {{#if user}}
+                            Hi {{user.username}}
+                        {{/if}}
+                    </div>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        {{#if user}}
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/user">My Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/user/add-product">Add Product</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">Logout</a>
+                            </li>
+                        {{else}}
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link nav-link-signup" href="/signup">Signup</a>
+                            </li>
+                        {{/if}}
+                    </ul>
+                </div>
             </div>
-        </div>
     </nav>
 </header>
 
 {{{body}}}
 
 
-<footer>
-    <div class="footer-info">
-        <img class="logo-caca" src="/images/logo-caca.png" alt=""/>
-        <div>
-            <ul class="footer-text-columns">
-                <li>COMPANY</li>
-                <li>About Us</li>
-                <li>Careers</li>
+<footer class="pt-4 mt-md-5 pt-md-5 border-top">
+    <div class="row">
+        <div class="col-12 col-md">
+            <img class="mb-2 footer-img" src="/images/logo-caca.png" alt="" width="24" height="19">
+            <small class="d-block mb-3 text-muted"><span class="footer-2021">&copy; 2021</span></small>
+        </div>
+        <div class="col-6 col-md footer-text">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
             </ul>
         </div>
-        <div>
-            <ul class="footer-text-columns">
-                <li>PRODUCT</li>
-                <li>Why WallaPOOP?</li>
-                <li>Security</li>
+        <div class="col-6 col-md footer-text">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
             </ul>
         </div>
-        <div>
-            <ul class="footer-text-columns">
-                <li>RESOURCES</li>
-                <li>Help Center</li>
-                <li>Guides</li>
+        <div class="col-6 col-md footer-text">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+                <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
             </ul>
         </div>
     </div>

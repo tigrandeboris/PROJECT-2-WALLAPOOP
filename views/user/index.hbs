@@ -1,25 +1,25 @@
 <main>
         <section class="section1">
         <h1>Your Products</h1>
-        <div class="container">
+        <div class="container justify-content-between">
             {{#each products}}
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card box">
-                        <img class="card-img-top image" src="../public/images/product-img.jpg"/>
                         <div class="card-body">
-                            <h5 class="card-title">{{this.name}}</h5>
+                            <img class="product-img" src="{{this.image_url}}" alt="">
+                            <h5 class="card-title card-text">Product: <span class="user-product-info">{{this.name}}</span></h5>
+
                             <p class="card-text">
-                                {{this.user.username}}
+                                Description: <span class="user-product-info">{{this.description}}</span>
                             </p>
                             <p class="card-text">
-                                {{this.description}}
-                            </p>
-                            <p class="card-text">
-                                {{this.price}} EUR
+                                Price: <span class="user-product-info">{{this.price}} EUR</span>
                             </p>
                             <div class="text-center">
-                                <a class="btn btn-primary" href="https://google.es"
-                                   target="_blank">Open</a>
+                                <a class="btn btn-success your-product-button" href="/user/edit-product/{{this.id}}">Edit Product</a>
+                                <form action="/user/delete-product/{{this.id}}" method="post">
+                                    <button class="btn btn-success your-product-button" type="submit"> Delete Product</button>
+                                </form>
                             </div>
                         </div>
                     </div>

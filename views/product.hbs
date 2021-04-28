@@ -1,0 +1,52 @@
+<div class="view-product">
+    <div class="container ">
+        <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card box">
+                <div class="card-body">
+                    <h5 class="card-title card-text">Product: <span class="user-product-info">{{product.name}}</span>
+                    </h5>
+                    <p class="card-text">
+                        Seller: <span class="user-product-info">{{product.user.username}}</span>
+                    </p>
+                    <p class="card-text">
+                        Description: <span class="user-product-info">{{product.description}}</span>
+                    </p>
+                    <p class="card-text">
+                        Price: <span class="user-product-info">{{product.price}} EUR</span>
+                    </p>
+                    <div class="text-center">
+                        {{#if user}}
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#contact">
+                                Contact
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="contact" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-border">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">Contact Seller</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <span class="contact-email-phone"><span class="card-text">Email:</span> {{product.user.email}}</span>
+                                                <br>
+                                                <span class="contact-email-phone"><span class="card-text">Phone Number:</span> {{product.user.phone}}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {{else}}
+                            <p>Do you want to contact?</p>
+                            <hr>
+                            <a class=".contact-sign-in-up" href="/login">Login</a>
+                            or
+                            <a class=".contact-sign-in-up" href="/signup">Signup</a>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

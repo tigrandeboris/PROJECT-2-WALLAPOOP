@@ -4,17 +4,48 @@
     box-sizing: border-box;
 }
 
-.d-flex {
-    width: calc(100% - 300px);
+body {
+    background: url("../images/circles-img.jpg") center center;
+    background-size: cover;
 }
 
-.section1 {
-    background: url("../images/circles-img.jpg") center center no-repeat;
+.brand-name {
+    color: white;
+    font-size: 30px;
+    font-family: "Franklin Gothic Heavy", serif;
+}
+
+.d-flex {
+    width: calc(100% - 550px);
+    margin: 0 20px;
+}
+.container-fluid {
+    background: url("../images/navbar-img.jpg") no-repeat;
     background-size: cover;
+}
+
+.navbar-brand {
+    margin: 0;
+}
+
+.navbar-username {
+    padding: 0 .5rem;
+    font-size: 20px;
+}
+
+.nav-link-signup {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.modal-border {
+    border: rgba(245, 132, 97, 0.64) 10px dotted;
 }
 
 .section1 h1 {
     text-align: center;
+    margin-top: 30px;
 }
 
 .container {
@@ -23,37 +54,99 @@
     flex-wrap: wrap;
 }
 
+.your-product-button {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.card-body {
+    border: rgba(245, 132, 97, 0.64) 10px dotted;
+}
+
+.form-floating {
+    margin: 10px 0;
+}
+
+.card-text {
+    color: #f58461;
+    text-align: center;
+}
+
+.user-product-info {
+    color: black;
+}
+
+.sign-in-up-anchor {
+    margin-top: 10px;
+}
+
+.sign-in-up-anchor a {
+    text-decoration: none;
+}
+
+.\.contact-sign-in-up {
+    text-decoration: none;
+}
+
 .col-sm-12 {
     margin: 20px;
 }
 
 .logo-caca {
     width: 100px;
+    object-fit: cover;
 }
 
 .logo-caca-nav {
     width: 80px;
 }
 
-footer {
-    background-color: #f8f6f6;
-}
-
-.footer-info {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 50px;
-}
-
 .add-product {
-    background: url("../images/circles-img.jpg") center center no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
+}
+
+.add-product h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.product-img {
+    width: 100%;
+}
+
+.contact-email-phone {
+    font-size: 25px;
+}
+
+.btn-lg {
+    margin-top: 20px;
 }
 
 .input-group {
     width: 500px;
     margin: 30px;
+}
+
+footer {
+    background: rgba(7, 7, 7, 0.44);
+    padding: 30px;
+}
+
+.footer-img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.footer-text {
+    color: white;
+}
+
+.footer-text ul li a{
+    color: white;
+}
+
+.footer-2021 {
+    color: white;
 }

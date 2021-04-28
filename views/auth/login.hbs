@@ -34,7 +34,7 @@
     <!-- Custom styles for this template -->
     <link href="/styles/signin.css" rel="stylesheet">
 </head>
-<body class="text-center">
+<body class="text-center login-signup-back">
 <main class="form-signin">
     <form action="/login" method="POST">
         <img class="mb-4" src="/images/logo-caca.png" alt="" width="72" height="57">
@@ -54,7 +54,13 @@
                 <input type="checkbox" value="remember-me"> Remember me
             </label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+        <button class="w-100 btn btn-lg btn-success" type="submit">Login</button>
+        <div class="sign-in-up-anchor">
+            <a href="/signup">Don't have an account? Signup!</a>
+            <br>
+            <a href="/">Go to Homepage</a>
+        </div>
+
         <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
 </main>
