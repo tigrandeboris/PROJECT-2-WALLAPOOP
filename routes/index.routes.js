@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     if (search) {
         filter = {name: {$regex: '.*' + search + '.*'}}
     }
-    Product.find(filter).limit(20)
+    Product.find(filter).limit(6)
     .populate('user')
     .then((products) => {
         res.render('index', {products, user: req.user})
